@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown Menu</title>
+</head>
+<body>
+
+    <form>
+        <label for="dropdownMenu">Select a Link:</label>
+        <select id="dropdownMenu" name="dropdownMenu">
+            <option value="https://www.example.com">Example Website</option>
+            <option value="https://www.example2.com">Another Example</option>
+            <option value="https://www.example3.com">Yet Another Example</option>
+        </select>
+
+        <input type="button" onclick="goToLink()" value="Go">
+    </form>
+
+    <script>
+        function goToLink() {
+            var dropdown = document.getElementById("dropdownMenu");
+            var selectedOption = dropdown.options[dropdown.selectedIndex].value;
+            window.location.href = selectedOption;
+        }
+    </script>
+
+</body>
+</html>
